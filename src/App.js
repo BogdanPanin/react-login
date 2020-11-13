@@ -68,7 +68,7 @@ function App() {
         <ProfilePage />
       ) : (
         <main className="wrap">
-          <Route exact path="/">
+          <Route path="/react-login/">
             <SignIn
               onEmail={onEmail}
               onPassword={onPassword}
@@ -77,7 +77,7 @@ function App() {
               onLine={onLine}
             />
           </Route>
-          <Route path="/registration">
+          <Route path="/react-login/registration">
             <SignUp
               onEmail={onEmail}
               onPassword={onPassword}

@@ -133,7 +133,7 @@ function SignUp({
           <button type="submit" className="registration__submit">
             Зарегистрироваться
           </button>
-          <Link to="/" className="registration__login">
+          <Link to="/react-login/" className="registration__login">
             Если у вас есть аккаунта нажмите здесь
           </Link>
         </form>
