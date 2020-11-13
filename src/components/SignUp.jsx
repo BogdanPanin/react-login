@@ -14,6 +14,7 @@ function SignUp({
   onSurname,
   name,
   surname,
+  onLine,
 }) {
   let [errors, setErrors] = React.useState(null);
   const passwordOneRef = React.useRef();
@@ -133,7 +134,11 @@ function SignUp({
           <button type="submit" className="registration__submit">
             Зарегистрироваться
           </button>
-          <Link to="/react-login/" className="registration__login">
+          <Link
+            to="/react-login/"
+            className="registration__login"
+            onClick={onLine}
+          >
             Если у вас есть аккаунта нажмите здесь
           </Link>
         </form>

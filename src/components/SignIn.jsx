@@ -71,7 +71,7 @@ function SignIn({ email, password, onPassword, onEmail, onLine }) {
           <button type="submit" className="login__submit">
             Войти на сайт
           </button>
-          <Link to="/react-login/registration" className="login__register">
+          <Link to="/react-login/" className="login__register" onClick={onLine}>
             Если у вас нету аккаунта нажмите здесь
           </Link>
         </form>

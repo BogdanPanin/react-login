@@ -36,7 +36,7 @@ function App() {
     dispatch(setPassword(data));
   };
   const onLine = (bool) => {
-    dispatch(setOnline(bool));
+    dispatch(setOnline(!hasAccount));
   };
   const onName = (name) => {
     dispatch(setName(name));
@@ -68,28 +68,31 @@ function App() {
         <ProfilePage />
       ) : (
         <main className="wrap">
-          <Route path="/react-login/">
-            <SignIn
-              onEmail={onEmail}
-              onPassword={onPassword}
-              email={email}
-              password={password}
-              onLine={onLine}
-            />
-          </Route>
-          <Route path="/react-login/registration">
-            <SignUp
-              onEmail={onEmail}
-              onPassword={onPassword}
-              email={email}
-              password={password}
-              onName={onName}
-              onSurname={onSurname}
-              onLine={onLine}
-              name={name}
-              surname={surname}
-            />
-          </Route>
+          {hasAccount ? (
+            <Route path="/react-login">
+              <SignIn
+                onEmail={onEmail}
+                onPassword={onPassword}
+                email={email}
+                password={password}
+                onLine={onLine}
+              />
+            </Route>
+          ) : (
+            <Route path="/react-login/">
+              <SignUp
+                onEmail={onEmail}
+                onPassword={onPassword}
+                email={email}
+                password={password}
+                onName={onName}
+                onSurname={onSurname}
+                onLine={onLine}
+                name={name}
+                surname={surname}
+              />
+            </Route>
+          )}
         </main>
       )}
     </div>
