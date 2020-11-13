@@ -68,7 +68,7 @@ function App() {
         <ProfilePage />
       ) : (
         <main className="wrap">
-          {hasAccount ? (
+          {hasAccount === true ? (
             <Route path="/react-login">
               <SignIn
                 onEmail={onEmail}
@@ -79,7 +79,7 @@ function App() {
               />
             </Route>
           ) : (
-            <Route path="/react-login/">
+            <Route exact path="/react-login/">
               <SignUp
                 onEmail={onEmail}
                 onPassword={onPassword}
