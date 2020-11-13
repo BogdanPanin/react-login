@@ -1,0 +1,36 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100px;
+  display: flex;
+  background-color: #2522ff;
+  justify-content: space-between;
+  align-items: center;
+  &__welcome {
+    position: relative;
+    left: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 21px;
+    color: #fff;
+  }
+  &__out {
+    position: relative;
+    right: 20px;
+    width: 200px;
+    height: 50px;
+    background: #03203e;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+}

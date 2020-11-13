@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import firebase from "firebase";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import { BrowserRouter } from "react-router-dom";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCp7suuzx0yrghyyIWy_M9RUKEwxPvY09g",
+  authDomain: "react-authorization-bd.firebaseapp.com",
+  databaseURL: "https://react-authorization-bd.firebaseio.com",
+  projectId: "react-authorization-bd",
+  storageBucket: "react-authorization-bd.appspot.com",
+  messagingSenderId: "1089343045250",
+  appId: "1:1089343045250:web:5fbc957b1c9460e4933e9b",
+  measurementId: "G-EC1VP0KK3V",
+};
+
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

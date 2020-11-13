@@ -1,0 +1,101 @@
+.login {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    padding: 50px;
+    background: #ffffff;
+    border-radius: 30px;
+  }
+  &__label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    position: relative;
+  }
+  &__p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  &__email {
+    position: relative;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 100%;
+    padding-left: 5px;
+  }
+  &__password {
+    position: relative;
+    margin-bottom: 30px;
+    height: 30px;
+    width: 100%;
+    padding-left: 5px;
+  }
+  &__submit {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #03a5d9;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  &__register {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  &__forgot {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0 auto;
+    position: relative;
+  }
+  &__error {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 30px;
+    color: red;
+  }
+}

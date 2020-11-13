@@ -1,0 +1,12 @@
+@import "./variables";
+
+@media screen and (max-width: $screen-md - 1px) {
+  .header {
+    &__welcome {
+      font-size: 16px;
+    }
+    &__out {
+      width: 100px;
+    }
+  }
+}
